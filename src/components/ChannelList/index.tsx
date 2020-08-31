@@ -1,5 +1,6 @@
 import React from 'react';
-import {Container, Category, AddCategoryIcon, ChannelButton} from './styles';
+import ChannelButton from '../ChannelButton';
+import {Container, Category, AddCategoryIcon} from './styles';
 
 
 const ChannelList: React.FC = () =>{

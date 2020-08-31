@@ -1,13 +1,22 @@
 import React from 'react';
-import {Container} from './styles';
+import {Container, HashtagIcon, InviteIcon, SettingsIcon} from './styles';
+
+export interface Props {
+    channelName: string;
+    selected?: boolean;
+
+}
 
 
-const ChannelButton: React.FC = () =>{
+const ChannelButton: React.FC<Props> = ({
+    channelName,
+    selected
+}) =>{
     return (
-        <Container>
+        <Container className={selected ? 'active' : ''}>
            <div>
                <HashtagIcon />
-               <span>chat-livre</span>
+                <span>{channelName}</span>
            </div>
 
            <div>
